@@ -1,24 +1,34 @@
-package com.cloudtemple.mattermost.traders;
+package com.cloudtemple.mattermost.traders.user;
 
 import java.util.HashMap;
 import java.util.Map;
-import com.cloudtemple.mattermost.MatterMostBotClient;
+
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
-import jakarta.xml.bind.annotation.XmlRootElement;
 
-@SuppressWarnings("hiding")
-@XmlRootElement
-public class MatterMostClientObject {
+/**
+ * Represents a User Status
+ */
+public class CustomStatus
+{
+  public String emoji;
+  public String text;
   private Map<String, Object> data = new HashMap<String, Object>();
-  private MatterMostBotClient client;
 
-  public MatterMostBotClient getClient() {
-    return client;
+  public String getEmoji()
+  {
+    return emoji;
+  }
+  public void setEmoji(String emoji) {
+    this.emoji = emoji;
   }
 
-  public void setClient(MatterMostBotClient client) {
-    this.client = client;
+  public String getText()
+  {
+    return text;
+  }
+  public void setText(String text) {
+    this.text = text;
   }
 
   @JsonAnyGetter
@@ -31,4 +41,7 @@ public class MatterMostClientObject {
     this.data.put(name, value);
   }
 
+
+
 }
+

@@ -1,247 +1,170 @@
 package com.cloudtemple.mattermost.traders.user;
 
+import java.util.HashMap;
+import java.util.Map;
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-import javax.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
 
 @SuppressWarnings("hiding")
 @XmlRootElement
-public class NotifyProps
-{
-	public String channel;
-	public String desktop;
-	public String desktop_sound;
-	public String email;
-	public String first_name;
-	public String mention_keys;
-	public String push;
-	public String username;
-	public String from_webhook;
-	public String webhook_display_name;
-	public String addedUsername;
-	public String comments;
-	public long desktop_duration;
-	public String push_status;
-	public String userId;
-	public String user_id;
-	public String addedUserId;
-	private final Map<String, Object> data = new ConcurrentHashMap<>();
-	public boolean auto_responder_active;
-	public String auto_responder_message;
-	public String new_header;
-	public String old_header;
+public class NotifyProps { // Nothing documented for this class :-(
 
-	public String getNew_header()
-	{
-		return new_header;
-	}
+  public String channel;
+  public String desktop;
+  public String desktop_sound;
+  public String email;
+  public String first_name;
+  public String mention_keys;
+  public String push;
+  public String username;
+  public String from_webhook;
+  public String webhook_display_name;
+  public String addedUsername;
+  public String comments;
+  public long desktop_duration;
+  public String push_status;
+  public String userId;
+  public String addedUserId;
+  private Map<String, Object> data = new HashMap<String, Object>();
 
-	public void setNew_header(final String new_header)
-	{
-		this.new_header = new_header;
-	}
+  public String getUsername() {
+    return username;
+  }
 
-	public String getOld_header()
-	{
-		return old_header;
-	}
+  public void setUsername(final String username) {
+    this.username = username;
+  }
 
-	public void setOld_header(final String old_header)
-	{
-		this.old_header = old_header;
-	}
+  public String getChannel() {
+    return channel;
+  }
 
-	public boolean isAuto_responder_active()
-	{
-		return auto_responder_active;
-	}
+  public void setChannel(final String channel) {
+    this.channel = channel;
+  }
 
-	public void setAuto_responder_active(final boolean auto_responder_active)
-	{
-		this.auto_responder_active = auto_responder_active;
-	}
+  public String getDesktop() {
+    return desktop;
+  }
 
-	public String getAuto_responder_message()
-	{
-		return auto_responder_message;
-	}
+  public void setDesktop(final String desktop) {
+    this.desktop = desktop;
+  }
 
-	public void setAuto_responder_message(final String auto_responder_message)
-	{
-		this.auto_responder_message = auto_responder_message;
-	}
+  public String getDesktop_sound() {
+    return desktop_sound;
+  }
 
-	public String getUsername()
-	{
-		return username;
-	}
+  public void setDesktop_sound(final String desktop_sound) {
+    this.desktop_sound = desktop_sound;
+  }
 
-	public void setUsername(final String username)
-	{
-		this.username = username;
-	}
+  public String getEmail() {
+    return email;
+  }
 
-	public String getChannel()
-	{
-		return channel;
-	}
+  public void setEmail(final String email) {
+    this.email = email;
+  }
 
-	public void setChannel(final String channel)
-	{
-		this.channel = channel;
-	}
+  public String getFirst_name() {
+    return first_name;
+  }
 
-	public String getDesktop()
-	{
-		return desktop;
-	}
+  public void setFirst_name(final String first_name) {
+    this.first_name = first_name;
+  }
 
-	public void setDesktop(final String desktop)
-	{
-		this.desktop = desktop;
-	}
+  public String getMention_keys() {
+    return mention_keys;
+  }
 
-	public String getDesktop_sound()
-	{
-		return desktop_sound;
-	}
+  public void setMention_keys(final String mention_keys) {
+    this.mention_keys = mention_keys;
+  }
 
-	public void setDesktop_sound(final String desktop_sound)
-	{
-		this.desktop_sound = desktop_sound;
-	}
+  public String getPush() {
+    return push;
+  }
 
-	public String getEmail()
-	{
-		return email;
-	}
+  public void setPush(final String push) {
+    this.push = push;
+  }
 
-	public void setEmail(final String email)
-	{
-		this.email = email;
-	}
+  public String getFrom_webhook() {
+    return from_webhook;
+  }
 
-	public String getFirst_name()
-	{
-		return first_name;
-	}
+  public void setFrom_webhook(final String from_webhook) {
+    this.from_webhook = from_webhook;
+  }
 
-	public void setFirst_name(final String first_name)
-	{
-		this.first_name = first_name;
-	}
+  public String getWebhook_display_name() {
+    return webhook_display_name;
+  }
 
-	public String getMention_keys()
-	{
-		return mention_keys;
-	}
+  public void setWebhook_display_name(final String webhook_display_name) {
+    this.webhook_display_name = webhook_display_name;
+  }
 
-	public void setMention_keys(final String mention_keys)
-	{
-		this.mention_keys = mention_keys;
-	}
+  public String getAddedUsername() {
+    return addedUsername;
+  }
 
-	public String getPush()
-	{
-		return push;
-	}
+  public void setAddedUsername(final String addedUsername) {
+    this.addedUsername = addedUsername;
+  }
 
-	public void setPush(final String push)
-	{
-		this.push = push;
-	}
+  public String getComments() {
+    return comments;
+  }
 
-	public String getFrom_webhook()
-	{
-		return from_webhook;
-	}
+  public void setComments(final String comments) {
+    this.comments = comments;
+  }
 
-	public void setFrom_webhook(final String from_webhook)
-	{
-		this.from_webhook = from_webhook;
-	}
+  public long getDesktop_duration() {
+    return desktop_duration;
+  }
 
-	public String getWebhook_display_name()
-	{
-		return webhook_display_name;
-	}
+  public void setDesktop_duration(final long desktop_duration) {
+    this.desktop_duration = desktop_duration;
+  }
 
-	public void setWebhook_display_name(final String webhook_display_name)
-	{
-		this.webhook_display_name = webhook_display_name;
-	}
+  public String getPush_status() {
+    return push_status;
+  }
 
-	public String getAddedUsername()
-	{
-		return addedUsername;
-	}
+  public void setPush_status(final String push_status) {
+    this.push_status = push_status;
+  }
 
-	public void setAddedUsername(final String addedUsername)
-	{
-		this.addedUsername = addedUsername;
-	}
+  public String getAddedUserId() {
+    return addedUserId;
+  }
 
-	public String getComments()
-	{
-		return comments;
-	}
+  public void setAddedUserId(final String addedUserId) {
+    this.addedUserId = addedUserId;
+  }
 
-	public void setComments(final String comments)
-	{
-		this.comments = comments;
-	}
+  public String getUserId() {
+    return userId;
+  }
 
-	public long getDesktop_duration()
-	{
-		return desktop_duration;
-	}
+  public void setUserId(final String userId) {
+    this.userId = userId;
+  }
 
-	public void setDesktop_duration(final long desktop_duration)
-	{
-		this.desktop_duration = desktop_duration;
-	}
 
-	public String getPush_status()
-	{
-		return push_status;
-	}
+  @JsonAnyGetter
+  public Map<String, Object> getData() {
+    return data;
+  }
 
-	public void setPush_status(final String push_status)
-	{
-		this.push_status = push_status;
-	}
+  @JsonAnySetter
+  public void setData(String name, Object value) {
+    this.data.put(name, value);
+  }
 
-	public String getAddedUserId()
-	{
-		return addedUserId;
-	}
-
-	public void setAddedUserId(final String addedUserId)
-	{
-		this.addedUserId = addedUserId;
-	}
-
-	public String getUserId()
-	{
-		return userId;
-	}
-
-	public void setUserId(final String userId)
-	{
-		this.userId = userId;
-	}
-
-	@JsonAnyGetter
-	public Map<String, Object> getData()
-	{
-		return data;
-	}
-
-	@JsonAnySetter
-	public void setData(final String name, final Object value)
-	{
-		data.put(name, value);
-	}
 }
